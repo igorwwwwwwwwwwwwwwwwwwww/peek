@@ -126,7 +126,9 @@ Peeked::Application.configure do
   # Redis with options
   config.peek.adapter = :redis, {
     client: Redis.new,
-    expires_in: 60 * 30 # => 30 minutes in seconds
+    expires_in: 60 * 30,     # => 30 minutes in seconds
+    compress: true,          # => compress large values with zlib
+    compress_threshold: 1024 # => compress values larger than 1KiB
   }
 
   # Memcache with no options
