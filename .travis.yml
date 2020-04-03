@@ -4,6 +4,9 @@ rvm:
   - 2.3.1
   - 2.2.5
 
+services:
+  - redis-server
+
 gemfile:
   - Gemfile # Rails 5
   - Gemfile-rails42
